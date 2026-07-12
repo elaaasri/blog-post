@@ -1,0 +1,26 @@
+{
+  "name": "blog-post",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/elaaasri/blog-post.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/elaaasri/blog-post/issues"
+  },
+  "homepage": "https://github.com/elaaasri/blog-post#readme",
+  "dependencies": {
+    "ejs": "^6.0.1",
+    "express": "^5.2.1",
+    "mongoose": "^9.7.4",
+    "morgan": "^1.11.0"
+  }
+}
