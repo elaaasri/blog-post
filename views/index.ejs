@@ -3,18 +3,23 @@
   <%- include('./partials/head.ejs') %>
 
   <body>
+
     <%- include('./partials/nav.ejs') %>
-    <h1>ALL BLOGS</h1>
+    <h1>ALL BLOGS :</h1>
 
     <% blogs.forEach((blog) => { %>
-      <h1> <%= blog.title %></h1>
+
+
+      <h1>
+        <a href="/blogs/<%= blog._id %>"><%= blog.title %></a>   
+      </h1>  
+
+
       <h2><%= blog.body %></h2>
       <h3><%= blog.description %></h3>
       <hr>
     <% }) %>
 
   </body>
-
   <script src="/script.js"></script>
-  
 </html>

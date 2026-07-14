@@ -48,4 +48,11 @@ app.post("/blogs", (req, res) => {
     .catch((err) => console.log(err));
 });
 
-// res.status(500).send("Something went wrong.");
+app.get("/blogs/:id", (req, res) => {
+  const id = req.params.id;
+  Blog.findById(id)
+    .then((blog) => res.render("details", { blog }))
+    .catch((err) => console.log(err));
+});
+
+// res.status(500).send("Something went wrong.");no
