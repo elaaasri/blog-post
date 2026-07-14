@@ -3,8 +3,7 @@ const addBlog = document.getElementById("add-blog");
 const about = document.getElementById("about");
 
 blogs.addEventListener("click", () => {
-  window.location.href = "/";
-  console.log("clicked");
+  window.location.href = "/blogs";
 });
 
 addBlog.addEventListener("click", () => {

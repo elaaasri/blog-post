@@ -5,11 +5,11 @@
   <body>
     <%- include('./partials/nav.ejs') %>
 
-    <form action="/blogs" method="POST" id="form">
-      <input type="text" placeholder="title" />
-      <input type="text" placeholder="body" />
-      <input type="text" placeholder="description" />
-      <button type="submit">Create Blog</button>
+    <form action="/blogs" method="POST">
+      <input type="text" placeholder="title" name="title" />
+      <input type="text" placeholder="body" name="body" />
+      <input type="text" placeholder="description" name="description" />
+      <button type="submit">Submit</button>
     </form>
   </body>
   <script src="/script.js"></script>
