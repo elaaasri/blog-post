@@ -55,4 +55,11 @@ app.get("/blogs/:id", (req, res) => {
     .catch((err) => console.log(err));
 });
 
+app.delete("/blogs/:id", (req, res) => {
+  const id = req.params.id;
+  Blog.findByIdAndDelete(id)
+    .then(() => res.sendStatus(200))
+    .catch((err) => console.log(err));
+});
+
 // res.status(500).send("Something went wrong.");no
