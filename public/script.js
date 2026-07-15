@@ -1,4 +1,4 @@
-const removeBtn = document.querySelectorAll(".remove-btn");
+const removeBtn = document.querySelectorAll(".remove-btn ");
 
 const removeBlog = (e) => {
   e.preventDefault();
@@ -13,4 +13,4 @@ const removeBlog = (e) => {
     .catch((err) => console.log(err));
 };
 
-removeBtn.forEach((btn) => btn.addEventListener("click", removeBlog));
+removeBtn?.forEach((btn) => btn?.addEventListener("click", removeBlog));

@@ -39,11 +39,12 @@ const blogDetails = (req, res) => {
 const blogDelete = (req, res) => {
   const id = req.params.id;
   Blog.findByIdAndDelete(id)
-    .then((res) => {
+    .then(() => {
       res.sendStatus(200);
     })
-    .catch(() => {
+    .catch((err) => {
       res.status(404).render("404");
+      console.log(err);
     });
 };
 

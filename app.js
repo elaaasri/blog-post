@@ -22,7 +22,3 @@ app.use(express.static("public"));
 app.use(morgan("dev"));
 app.use(express.urlencoded({ extended: true }));
 app.use("/", blogRoutes);
-
-// adding 404
-// fix blogs/:id (azeazeaze) path loading !!!
-// fixing empty inputs
