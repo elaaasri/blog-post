@@ -1,30 +1,16 @@
-const blogs = document.getElementById("blogs");
-const addBlog = document.getElementById("add-blog");
-const about = document.getElementById("about");
-// const blogTitle = document.getElementById("blog-title");
-const detailDeleteBtn = document.getElementById("details-delete-btn");
+const removeBtn = document.querySelectorAll(".remove-btn");
 
-blogs.addEventListener("click", () => {
-  window.location.href = "/blogs";
-});
-
-addBlog.addEventListener("click", () => {
-  window.location.href = "/create";
-});
-
-about.addEventListener("click", () => {
-  window.location.href = "/about";
-});
-
-const deletBlog = (e) => {
+const removeBlog = (e) => {
   e.preventDefault();
-  const id = e.target.dataset.id;
+  const { id } = e.target.dataset;
 
   fetch(`/blogs/${id}`, {
     method: "DELETE",
-  }).then(() => {
-    window.location.href = "/blogs";
-  });
+  })
+    .then(() => {
+      window.location.href = "/blogs";
+    })
+    .catch((err) => console.log(err));
 };
 
-detailDeleteBtn?.addEventListener("click", deletBlog);
+removeBtn.forEach((btn) => btn.addEventListener("click", removeBlog));

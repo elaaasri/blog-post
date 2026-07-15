@@ -5,11 +5,10 @@
   <body>
     <%- include('./partials/nav.ejs') %>
     <h1>Blog Details :</h1>
-    <h2><%= blog.title %></h2>
+    <h2><%= blog?.title %></h2>
     <h2><%= blog?.body %></h2>
     <h3><%= blog?.description %></h3>
-    <button id="details-delete-btn" data-id="<%= blog?._id %>">Delete</button>
-
+    <button class="remove-btn" data-id="<%= blog?._id %>">REMOVE</button>
     <hr />
   </body>
 

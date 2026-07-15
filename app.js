@@ -2,7 +2,7 @@ import express from "express";
 import morgan from "morgan";
 import mongoose, { mongo } from "mongoose";
 import dotenv from "dotenv";
-import Blog from "./models/blog.js";
+import blogRoutes from "./routes/blogRoutes.js";
 
 // express app :
 const app = express();
@@ -18,48 +18,7 @@ mongoose
 app.set("view engine", "ejs");
 
 // midllewares :
-app.use(morgan("dev"));
 app.use(express.static("public"));
+app.use(morgan("dev"));
 app.use(express.urlencoded({ extended: true }));
-
-app.get("/", (req, res) => {
-  res.redirect("/blogs");
-});
-
-app.get("/create", (req, res) => {
-  res.render("create");
-});
-
-app.get("/about", (req, res) => {
-  res.render("about");
-});
-
-app.get("/blogs", (req, res) => {
-  Blog.find()
-    .then((blogs) => res.render("index", { blogs }))
-    .catch((err) => console.log(err));
-});
-
-app.post("/blogs", (req, res) => {
-  const blog = new Blog(req.body);
-  blog
-    .save()
-    .then(() => res.redirect("/blogs"))
-    .catch((err) => console.log(err));
-});
-
-app.get("/blogs/:id", (req, res) => {
-  const id = req.params.id;
-  Blog.findById(id)
-    .then((blog) => res.render("details", { blog }))
-    .catch((err) => console.log(err));
-});
-
-app.delete("/blogs/:id", (req, res) => {
-  const id = req.params.id;
-  Blog.findByIdAndDelete(id)
-    .then(() => res.sendStatus(200))
-    .catch((err) => console.log(err));
-});
-
-// res.status(500).send("Something went wrong.");no
+app.use("/", blogRoutes);

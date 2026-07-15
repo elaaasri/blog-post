@@ -23,5 +23,9 @@
     "express": "^5.2.1",
     "mongoose": "^9.7.4",
     "morgan": "^1.11.0"
+  },
+  "devDependencies": {
+    "prettier": "^3.9.5",
+    "prettier-plugin-ejs": "^1.0.3"
   }
 }
