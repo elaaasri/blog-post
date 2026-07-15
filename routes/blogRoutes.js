@@ -10,5 +10,6 @@ router.get("/blogs", blogController.blogIndex);
 router.post("/blogs", blogController.blogCreatePost);
 router.get("/blogs/:id", blogController.blogDetails);
 router.delete("/blogs/:id", blogController.blogDelete);
+router.use(blogController.notFoundPage);
 
 export default router;

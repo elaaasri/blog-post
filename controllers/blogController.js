@@ -30,14 +30,25 @@ const blogDetails = (req, res) => {
   const id = req.params.id;
   Blog.findById(id)
     .then((blog) => res.render("details", { blog }))
-    .catch((err) => console.log(err));
+    .catch((err) => {
+      res.status(404).render("404");
+      console.log(err);
+    });
 };
 
 const blogDelete = (req, res) => {
   const id = req.params.id;
   Blog.findByIdAndDelete(id)
-    .then(() => res.sendStatus(200))
-    .catch((err) => console.log(err));
+    .then((res) => {
+      res.sendStatus(200);
+    })
+    .catch(() => {
+      res.status(404).render("404");
+    });
+};
+
+const notFoundPage = (req, res) => {
+  res.status(404).render("404");
 };
 
 export {
@@ -48,4 +59,5 @@ export {
   blogCreatePost,
   blogDetails,
   blogDelete,
+  notFoundPage,
 };
