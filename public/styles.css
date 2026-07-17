@@ -1,4 +1,141 @@
-#add-blog-container {
-  border: red 1px solid;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  font-family: "Montenegrin Gothic One", serif;
+  color: white;
+}
+body {
+  background: oklch(20.695% 0.03411 256.419);
+}
+/* header styles  */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: solid 1px rgb(154, 154, 154);
+  padding: 2%;
+  margin-bottom: 20px;
+}
+header h1 {
+  font-size: 60px;
+}
+header nav {
+  display: flex;
+  justify-content: space-around;
+  width: 30%;
+  font-size: 1.2rem;
+  align-self: flex-end;
+}
+nav a {
+  text-decoration: none;
+  font-weight: bold;
+}
+nav a:hover {
+  text-underline-offset: 5px;
+  text-decoration: underline;
+  color: rgb(117, 123, 192);
+}
+
+/* blogs card */
+.blogs-header {
+  justify-self: center;
+}
+.blogs-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+.blog-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2%;
+  font-size: 1.2rem;
+  width: 60%;
+  margin: 0 auto;
+  box-shadow:
+    rgba(0, 0, 0, 0.4) 0px 2px 6px,
+    rgba(0, 0, 0, 0.4) 0px 1px 4px;
+  margin-top: 20px;
+  word-break: break-word;
+}
+.blog-content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.blog-content :last-child {
+  align-self: end;
+  font-size: 15px;
+}
+.blog-content a {
+  align-items: center;
+  align-self: center;
+  text-underline-offset: 5px;
+  text-decoration: underline;
+  font-size: 1.4rem;
+}
+.blog-content a:hover {
+  color: rgb(117, 123, 192);
+}
+.remove-btn {
+  text-align: center;
+  font-weight: bold;
+  color: #000;
+  border: none;
+  border-radius: 3px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+  height: 35px;
+}
+.remove-btn:hover {
+  background-color: black;
+  box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.4);
+  color: #fff;
+  transform: translateY(-7px);
+}
+.remove-btn:active {
+  transform: translateY(-1px);
+}
+/* .blog-content p,
+.blog-content a {
+  padding-left: 15%;
+} */
+
+/* .blog-content {
+  display: flex;
+  padding-left: 5%;
+  border: 1px solid red;
   background-color: yellow;
+  height: 200px;
+} */
+.remove-btn {
+  width: 10%;
+  color: black;
+}
+/* .blog-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 15px;
+  font-size: 1.5rem;
+  flex-wrap: wrap;
+  width: 80%;
+  height: 500px;
+  word-break: break-word;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow: 0 4px 20px rgba(238, 73, 73, 0.15);
+} */
+.blog-content button {
+  width: 50px;
+}
+
+form input {
+  color: black;
 }

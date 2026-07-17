@@ -25,6 +25,7 @@
     "morgan": "^1.11.0"
   },
   "devDependencies": {
+    "browser-sync": "^3.0.4",
     "prettier": "^3.9.5",
     "prettier-plugin-ejs": "^1.0.3"
   }

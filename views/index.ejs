@@ -4,16 +4,23 @@
 
   <body>
     <%- include('./partials/nav.ejs') %>
-    <h1>ALL BLOGS :</h1>
-    <% blogs?.forEach((blog) => { %>
-      <h1>
-        <a href="/blogs/<%= blog._id %>"><%= blog.title %></a>
-      </h1>  
-      <h2><%= blog.body %></h2>
-      <h3><%= blog.description %></h3>
-      <button class="remove-btn" data-id="<%= blog?._id %>">REMOVE</button>
-      <hr>
-    <% }) %>
+    <h1 class="blogs-header">ALL BLOGS :</h1>
+
+    <div class="blogs-container">
+
+      <% blogs?.forEach((blog) => { %>
+        <div class="blog-card">
+          <div class="blog-content">
+            <a href="/blogs/<%= blog._id %>">TITLE : <%= blog.title %></a>
+            <p>BODY :&emsp;<%= blog.body %></p>
+            <p>DESCRIPTION :&emsp; <%= blog.description %></p>
+            <span><%= blog.createdAt.toString().split(" GMT")[0] %></span>
+          </div>
+          <button class="remove-btn" data-id="<%= blog?._id %>">REMOVE</button>
+        </div>
+      <% }) %>
+
+    </div>
 
   </body>
   <script src="/script.js"></script>
