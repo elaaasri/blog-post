@@ -24,6 +24,11 @@ app.use(express.urlencoded({ extended: true }));
 app.use("/", blogRoutes);
 
 // stlyes
+// blogs done
+// add blog
+// about
+// 404
+
 // In Vercel → Settings → Environment Variables, add:
 // DB_URI=your_mongodb_atlas_connection_string
 // In MongoDB Atlas → Network Access, add:

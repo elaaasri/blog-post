@@ -11,7 +11,7 @@
       <% blogs?.forEach((blog) => { %>
         <div class="blog-card">
           <div class="blog-content">
-            <a href="/blogs/<%= blog._id %>">TITLE : <%= blog.title %></a>
+            <a href="/blogs/<%= blog._id %>">TITLE : <%= blog.title.toUpperCase() %></a>
             <p>BODY :&emsp;<%= blog.body %></p>
             <p>DESCRIPTION :&emsp; <%= blog.description %></p>
             <span><%= blog.createdAt.toString().split(" GMT")[0] %></span>
@@ -19,7 +19,7 @@
           <button class="remove-btn" data-id="<%= blog?._id %>">REMOVE</button>
         </div>
       <% }) %>
-
+        
     </div>
 
   </body>

@@ -38,7 +38,7 @@ nav a:hover {
   color: rgb(117, 123, 192);
 }
 
-/* blogs card */
+/* blogs card styles */
 .blogs-header {
   justify-self: center;
 }
@@ -80,6 +80,7 @@ nav a:hover {
 }
 .blog-content a:hover {
   color: rgb(117, 123, 192);
+  text-decoration: none;
 }
 .remove-btn {
   text-align: center;
@@ -92,6 +93,7 @@ nav a:hover {
   cursor: pointer;
   outline: none;
   height: 35px;
+  width: 10%;
 }
 .remove-btn:hover {
   background-color: black;
@@ -102,40 +104,48 @@ nav a:hover {
 .remove-btn:active {
   transform: translateY(-1px);
 }
-/* .blog-content p,
-.blog-content a {
-  padding-left: 15%;
-} */
-
-/* .blog-content {
-  display: flex;
-  padding-left: 5%;
-  border: 1px solid red;
-  background-color: yellow;
-  height: 200px;
-} */
-.remove-btn {
-  width: 10%;
-  color: black;
-}
-/* .blog-card {
+/* create page styles */
+form {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  gap: 15px;
-  font-size: 1.5rem;
-  flex-wrap: wrap;
-  width: 80%;
-  height: 500px;
-  word-break: break-word;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(20px);
-  box-shadow: 0 4px 20px rgba(238, 73, 73, 0.15);
-} */
-.blog-content button {
-  width: 50px;
-}
-
-form input {
+  margin: 0 auto;
+  width: 50%;
+  font-size: 1.2rem;
   color: black;
+  gap: 5px;
+}
+form input,
+form textarea {
+  color: black;
+  padding-left: 2%; /* space from the left */
+}
+form input {
+  height: 50px;
+}
+form textarea {
+  height: 120px;
+  padding-top: 2%;
+}
+#submit-button {
+  align-self: center;
+  font-weight: bold;
+  color: #000;
+  border: none;
+  border-radius: 3px;
+  box-shadow: 0px 8px 15px rgba(255, 255, 255, 0.5);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+  height: 40px;
+  width: 20%;
+  margin-top: 15px;
+}
+#submit-button:hover {
+  background-color: black;
+  box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.4);
+  color: #fff;
+  transform: translateY(-7px);
+}
+#submit-button:active {
+  transform: translateY(-1px);
 }

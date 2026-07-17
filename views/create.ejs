@@ -6,15 +6,19 @@
     <%- include('./partials/nav.ejs') %>
 
     <form action="/blogs" method="POST">
-      <input type="text" placeholder="title" name="title" required />
-      <input type="text" placeholder="body" name="body" required />
-      <input
+      <label for="title">TITLE :</label>
+      <input type="text" placeholder="title" name="title" id="title" required />
+      <label for="body">BODY :</label>
+      <input type="text" placeholder="body" name="body" id="body" required />
+      <label for="description">DESCRIPTION :</label>
+      <textarea
         type="text"
         placeholder="description"
         name="description"
+        id="description"
         required
-      />
-      <button type="submit" id="submit-button">Submit</button>
+      ></textarea>
+      <button type="submit" id="submit-button">SUBMIT</button>
     </form>
   </body>
   <script src="/script.js"></script>
