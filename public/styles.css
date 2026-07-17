@@ -162,3 +162,17 @@ form textarea {
   gap: 10px;
   margin-top: 50px;
 }
+/* blog details styles */
+.blog-details-container {
+  display: flex;
+  flex-direction: column;
+  /* justify-self: center; */
+  margin-left: 60px;
+  border-left: solid rgb(59, 67, 131) 8px;
+  padding: 2%;
+  width: 80%;
+  font-size: 1.5rem;
+  gap: 10px;
+  word-break: break-word;
+  margin-top: 30px;
+}

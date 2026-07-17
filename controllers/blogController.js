@@ -14,6 +14,7 @@ const about = (req, res) => {
 
 const blogIndex = (req, res) => {
   Blog.find()
+    .sort({ createdAt: -1 })
     .then((blogs) => res.render("index", { blogs }))
     .catch((err) => console.log(err));
 };

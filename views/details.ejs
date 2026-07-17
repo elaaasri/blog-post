@@ -4,12 +4,13 @@
 
   <body>
     <%- include('./partials/nav.ejs') %>
-    <h1>Blog Details :</h1>
-    <h2><%= blog?.title %></h2>
-    <h2><%= blog?.body %></h2>
-    <h3><%= blog?.description %></h3>
-    <button class="remove-btn" data-id="<%= blog?._id %>">REMOVE</button>
-    <hr />
+    <div class="blog-details-container">
+      <h1>BLOG DETAILS :</h1>
+      <h3>TITLE : <%= blog?.title.toUpperCase() %></h3>
+      <h3>BODY : <%= blog?.body %></h3>
+      <h3>DESCRIPTION : <%= blog?.description %></h3>
+      <button class="remove-btn" data-id="<%= blog?._id %>">REMOVE</button>
+    </div>
   </body>
 
   <script src="/script.js"></script>
