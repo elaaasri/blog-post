@@ -32,7 +32,7 @@ const blogDetails = (req, res) => {
   Blog.findById(id)
     .then((blog) => res.render("details", { blog }))
     .catch((err) => {
-      res.status(404).render("404");
+      res.status(404).render("not-found-page");
       console.log(err);
     });
 };
@@ -44,13 +44,13 @@ const blogDelete = (req, res) => {
       res.sendStatus(200);
     })
     .catch((err) => {
-      res.status(404).render("404");
+      res.status(404).render("not-found-page");
       console.log(err);
     });
 };
 
 const notFoundPage = (req, res) => {
-  res.status(404).render("404");
+  res.status(404).render("not-found-page");
 };
 
 export {

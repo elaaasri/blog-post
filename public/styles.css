@@ -166,7 +166,6 @@ form textarea {
 .blog-details-container {
   display: flex;
   flex-direction: column;
-  /* justify-self: center; */
   margin-left: 60px;
   border-left: solid rgb(59, 67, 131) 8px;
   padding: 2%;
@@ -174,5 +173,60 @@ form textarea {
   font-size: 1.5rem;
   gap: 10px;
   word-break: break-word;
-  margin-top: 30px;
+  margin-top: 70px;
+}
+/* not found page styles */
+.notFoundPageContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.notFoundPageContainer img {
+  width: 350px;
+}
+.notFoundPageContainer div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
+.notFoundPageContainer div span:first-child {
+  font-weight: bold;
+  font-size: 2rem;
+}
+.notFoundPageContainer div span:nth-child(2) {
+  font-size: 7rem;
+}
+.notFoundPageContainer div span:nth-child(3) {
+  font-weight: bold;
+}
+.button {
+  text-align: center;
+  padding: 3%;
+  font-weight: bold;
+  color: #000;
+  background-color: #fff;
+  border-radius: 3px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  margin-top: 20px;
+  width: 40%;
+  font-size: 12px;
+}
+.button:hover {
+  background-color: rgba(47, 162, 203, 0.3);
+  box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.4);
+  transform: translateY(-7px);
+  color: white;
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
+.button:active {
+  transform: translateY(-1px);
+}
+.notFoundPageContainer a {
+  text-decoration: none;
 }
