@@ -1,6 +1,7 @@
 # Blog Post App
 
 This is a simple project where you can create, read, and delete blog posts. It was built using **Node.js**, **Express**, **MongoDB**, and **EJS** to practice backend development.
+
 This project was built by following the **Node.js Crash Course** by **The Net Ninja** as a learning project.
 
 **Course:** 
